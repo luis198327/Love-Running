@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: lato, sans-serif;
+    font-family: Lato, sans-serif;
     font-weight: 300;
     color: #3a3a3a;
 }
@@ -71,7 +71,7 @@ h1, h2 {
 #hero-image {
     height: 600px;
     width: 100%;
-    background: url(../images/hero-image.webp) no-repeat center center;
+    background: url('../images/hero-image.webp') no-repeat center center;
 
         /* animates zoom effect on loading page */
         animation-name: hero-zoom;
@@ -91,7 +91,7 @@ h1, h2 {
 
 #cover-text {
     font-size: 130%;
-    font-family: Oswald sans-serif;
+    font-family: Oswald, sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
 
@@ -135,22 +135,25 @@ hr {
     width: 100%;
     margin: 5px 0;
 }
-.left-about-heading, .right-about-heading {
-    width: 60%;
-    line-height: 20px;
-    clear: both;
-    margin-bottom: 50px;
-}
-
-.left-about-heading {
-    float: right;
-}
-.right-about-heading {
-    float: left;
-}
-
-.right-about-heading h2, .right-about-heading p {
-    text-align: right;
+.left-about-heading {	
+    width: 60%;	
+    float: right;	
+    line-height: 20px;	
+    clear: both;	
+    margin-bottom: 50px;	
+}	
+.right-about-heading {	
+    width: 60%;	
+    float: left;	
+    line-height: 20px;	
+    clear: both;	
+    margin-bottom: 50px;	
+}	
+.right-about-heading h2 {	
+    text-align: right;	
+}	
+.right-about-heading p {	
+    text-align: right;	
 }
 
 #welcome {
@@ -171,7 +174,7 @@ hr {
 }
 
 #circle-cover-bg {
-    background: url(../images/ethos-center-image.jpg) no-repeat center center;
+    background: url('../images/ethos-center-image.jpg') no-repeat center center;
     height: 100%;
     border-radius: 50%;
 }
@@ -179,7 +182,7 @@ hr {
 /*  event times */
 
 #times {
-    background-image: url(../images/dublin-city.webp);
+    background-image: url('../images/dublin-city.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -219,7 +222,7 @@ footer {
 
 .social-networks i {
     font-size: 160%;
-    margin: 1px;
+    margin: 1%;
     padding: 5%;
     color: #3a3a3a;
 }
@@ -229,12 +232,12 @@ footer {
 #photos {
     clear: both;
     line-height: 0;
-    columns: 4;
+    column-count: 4;
     column-gap: 0;
 }
 
 #photos > img {
-    width: 100%;        
+    width: 100%;
 }
 
 /* Media Query */
@@ -278,5 +281,29 @@ footer {
         margin-left: 30px;
         margin-bottom: 20px;
         line-height: 25px;
+    }
+
+    #cover-text {
+        left: 0;
+    }
+
+    #club-ethos {
+        width: 90%;
+        height: 1200px;
+        margin: 0 auto;
+    }
+
+    .left-about-heading, .right-about-heading {
+        width: inherit;
+    }
+
+    .left-about-heading h2, .right-about-heading h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .left-about-heading p, .right-about-heading p {
+        text-align: center;
+        padding: 0 20px;
     }
 }
