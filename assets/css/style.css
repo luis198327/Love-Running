@@ -14,7 +14,8 @@ body {
 
 /* headings and logo */
 
-h1, h2 {
+h1,
+h2 {
     font-family: Oswald, sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -34,9 +35,11 @@ h1, h2 {
     letter-spacing: 4px;
 }
 
-#menu, #logo {
+#menu,
+#logo {
     line-height: 75px;
 }
+
 #menu li {
     float: right;
     list-style-type: none;
@@ -65,29 +68,32 @@ h1, h2 {
     position: relative;
 }
 
-#cover-text, #cover-text h2 {
+#cover-text,
+#cover-text h2 {
     color: #fff;
 }
+
 #hero-image {
     height: 600px;
     width: 100%;
     background: url('../images/hero-image.webp') no-repeat center center;
 
-        /* animates zoom effect on loading page */
-        animation-name: hero-zoom;
-        animation-duration: 5s;
-        animation-fill-mode: forwards;
+    /* animates zoom effect on loading page */
+    animation-name: hero-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+/* creates the level of zoom for hero image */
+@keyframes hero-zoom {
+    from {
+        transform: scale(1);
     }
-    
-    /* creates the level of zoom for hero image */
-    @keyframes hero-zoom {
-        from{
-            transform: scale(1);
-        }
-        to{
-            transform: scale(1.1);
-        }
+
+    to {
+        transform: scale(1.1);
     }
+}
 
 #cover-text {
     font-size: 130%;
@@ -117,13 +123,13 @@ h1, h2 {
     padding-top: 30px;
     width: 33%;
     float: left;
-    }
+}
 
 #right-about {
     padding-top: 30px;
     width: 33%;
     float: right;
-    }
+}
 
 #centre-about {
     width: 33%;
@@ -135,25 +141,29 @@ hr {
     width: 100%;
     margin: 5px 0;
 }
-.left-about-heading {	
-    width: 60%;	
-    float: right;	
-    line-height: 20px;	
-    clear: both;	
-    margin-bottom: 50px;	
-}	
-.right-about-heading {	
-    width: 60%;	
-    float: left;	
-    line-height: 20px;	
-    clear: both;	
-    margin-bottom: 50px;	
-}	
-.right-about-heading h2 {	
-    text-align: right;	
-}	
-.right-about-heading p {	
-    text-align: right;	
+
+.left-about-heading {
+    width: 60%;
+    float: right;
+    line-height: 20px;
+    clear: both;
+    margin-bottom: 50px;
+}
+
+.right-about-heading {
+    width: 60%;
+    float: left;
+    line-height: 20px;
+    clear: both;
+    margin-bottom: 50px;
+}
+
+.right-about-heading h2 {
+    text-align: right;
+}
+
+.right-about-heading p {
+    text-align: right;
 }
 
 #welcome {
@@ -216,7 +226,7 @@ footer {
     text-align: center;
 }
 
-.social-networks > li {
+.social-networks>li {
     display: inline;
 }
 
@@ -236,7 +246,7 @@ footer {
     column-gap: 0;
 }
 
-#photos > img {
+#photos>img {
     width: 100%;
 }
 
@@ -255,7 +265,8 @@ footer {
         margin: 0;
     }
 
-    #left-about, #right-about {
+    #left-about, 
+    #right-about {
         width: 100%;
         float: left;
         padding: 0;
@@ -265,6 +276,13 @@ footer {
         clear: both;
         width: 100%;
         float: left;
+        padding: 0;
+    }
+
+    #times>div {
+        width: 100%;
+        clear: both;
+        height: 150px;
         padding: 0;
     }
 
@@ -293,17 +311,31 @@ footer {
         margin: 0 auto;
     }
 
-    .left-about-heading, .right-about-heading {
+    .left-about-heading,
+    .right-about-heading {
         width: inherit;
     }
 
-    .left-about-heading h2, .right-about-heading h2 {
+    .left-about-heading h2,
+    .right-about-heading h2 {
         width: 100%;
         text-align: center;
     }
 
-    .left-about-heading p, .right-about-heading p {
+    .left-about-heading p,
+    .right-about-heading p {
         text-align: center;
         padding: 0 20px;
+    }
+
+    #photos {
+        column-count: 3;
+    }
+}
+
+/* For small screen sizes below 800px wide and down */
+@media screen and (max-width: 800px) {
+    #photos {
+        column-count: 2;
     }
 }
